@@ -56,6 +56,7 @@ public class MedicoController {
 	public String GuardarMedico(@ModelAttribute TblMedico tblmed, RedirectAttributes redirectAttributes) {
 		try {
 			//Guardar producto en BD
+
             imedicoservicio.RegistrarMedico(tblmed);
             // Agregar mensaje de éxito
             redirectAttributes.addFlashAttribute("mensaje", "Medico registrado exitosamente.");
@@ -92,4 +93,14 @@ public class MedicoController {
 	
 
 }
+	
+	@GetMapping("/EditarMedico/{id}")
+    public String Editar(@PathVariable("id") Integer idmedico, Model modelo) {
+        TblMedico med = imedicoservicio.buscarporId(idmedico);
+        modelo.addAttribute("regmedico", med);
+        return "/Vistas/FrmRegMedico";
+    }
+	
+	
+	
 }

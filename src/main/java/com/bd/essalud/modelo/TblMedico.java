@@ -15,7 +15,7 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Table(name="tbl_medico")
+@Table(name="tbl_medicot3")
 
 
 
@@ -78,8 +78,8 @@ public class TblMedico {
 	}
 
 
-	public void setApelldiot3(String apelldiot3) {
-		this.apellidot3 = apelldiot3;
+	public void setApellidot3(String apellidot3) {
+		this.apellidot3 = apellidot3;
 	}
 
 
